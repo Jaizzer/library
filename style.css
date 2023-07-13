@@ -2,6 +2,11 @@
 
 * {
     box-sizing: border-box;
+    --text: #111023;
+    --background: #e0e0f1;
+    --primary: #5c57b2;
+    --secondary: #cfcee9;
+    --accent: #5c57b2;
 }
 
 body * {
