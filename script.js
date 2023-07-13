@@ -1,4 +1,5 @@
 let myLibrary = [];
+let mainContent = document.querySelector(".main-content");
 
 // Book constructor
 function Book(title, author, pageCount, status) {
