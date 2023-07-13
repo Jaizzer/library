@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+.layout {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
 .main-content {
     width: 100%;
 
