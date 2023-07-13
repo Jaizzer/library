@@ -14,6 +14,9 @@ function addBookToLibrary() {
     for (let i = 0; i < 5; i++) {
         let currentBook = new Book(`Book ${i+1}`,`Author ${i+1}`, `${300 - i}`, `${(i+1) % 2 === 0}` )
         myLibrary.push(currentBook);
+
+        let card = createCard(currentBook);
+        mainContent.appendChild(card);
     }
 }
 
@@ -60,6 +63,6 @@ function createCard(Book) {
         // Append card content inside the card.
         card.appendChild(cardContent);
     }
-    
+
     return card;
 }
