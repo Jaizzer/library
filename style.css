@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body * {
+    font-family: 'Roboto', sans-serif;
+}
+
 .layout {
     display: grid;
     grid-template-rows: auto 1fr;
