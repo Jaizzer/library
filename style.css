@@ -1,3 +1,14 @@
 * {
     box-sizing: border-box;
 }
+
+.main-content {
+    width: 100%;
+
+    padding: 5%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-gap: 10px;
+    grid-auto-rows: 300px;
+}
