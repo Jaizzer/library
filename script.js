@@ -7,6 +7,10 @@ const pageCountInput = document.querySelector("#page-count-input");
 const statusInput = document.querySelector("#status-input");
 
 window.addEventListener('load', function() {
+    if (localStorage.getItem('myLibrary')) {
+        myLibrary = JSON.parse(localStorage.getItem('myLibrary'));
+    }
+
     for (let book of myLibrary) {
         let card = createCard(book);
         mainContent.appendChild(card);
@@ -29,6 +33,7 @@ function Book(title, author, pageCount, status) {
 function addBookToLibrary() {
     let currentBook = new Book(`${titleInput.value}`, `${authorInput.value}`, `${pageCountInput.value}`, `${statusInput.value}`)
     myLibrary.push(currentBook);
+    localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
     let card = createCard(currentBook);
     mainContent.appendChild(card);
 }
