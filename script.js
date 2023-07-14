@@ -16,14 +16,10 @@ function Book(title, author, pageCount, status) {
 }
 
 function addBookToLibrary() {
-    // do stuff here
-    for (let i = 0; i < 5; i++) {
-        let currentBook = new Book(`Book ${i+1}`,`Author ${i+1}`, `${300 - i}`, `${(i+1) % 2 === 0}` )
-        myLibrary.push(currentBook);
-
-        let card = createCard(currentBook);
-        mainContent.appendChild(card);
-    }
+    let currentBook = new Book(`${titleInput.value}`, `${authorInput.value}`, `${pageCountInput.value}`, `${statusInput.value}`)
+    myLibrary.push(currentBook);
+    let card = createCard(currentBook);
+    mainContent.appendChild(card);
 }
 
 // This function creates a card.
