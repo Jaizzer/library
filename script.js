@@ -6,6 +6,10 @@ const authorInput = document.querySelector("#author-input");
 const pageCountInput = document.querySelector("#page-count-input");
 const statusInput = document.querySelector("#status-input");
 
+form.addEventListener("submit", event => {
+    event.preventDefault();
+    addBookToLibrary();
+});
 
 // Book constructor
 function Book(title, author, pageCount, status) {
