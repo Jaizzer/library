@@ -70,13 +70,16 @@ function createCard(Book) {
             // Create button.
             let statusButton = document.createElement("button");
             statusButton.textContent = Book[property] ? "Read" : "Not Read";
+            statusButton.className = Book[property] ? "read" : "not-read";
 
             statusButton.addEventListener("click", ()=> {
                 if (statusButton.textContent === "Read") {
                     statusButton.textContent = "Not Read";
+                    statusButton.className = "not-read";
                 }
                 else {
                     statusButton.textContent = "Read";
+                    statusButton.className = "read";
                 }
             })
             
