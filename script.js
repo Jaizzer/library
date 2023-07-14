@@ -1,5 +1,11 @@
 let myLibrary = [];
 let mainContent = document.querySelector(".main-content");
+const form = document.querySelector("form");
+const titleInput = document.querySelector("#title-input");
+const authorInput = document.querySelector("#author-input");
+const pageCountInput = document.querySelector("#page-count-input");
+const statusInput = document.querySelector("#status-input");
+
 
 // Book constructor
 function Book(title, author, pageCount, status) {
