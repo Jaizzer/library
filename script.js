@@ -69,9 +69,6 @@ function createCard(Book) {
             // Append button
             cardContent.appendChild(statusButton)
         }
-        else {
-            cardContent.textContent = "Jaizzer";
-        }
     
         // Append card content inside the card.
         card.appendChild(cardContent);
