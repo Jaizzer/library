@@ -82,7 +82,7 @@ function createCard(Book) {
                     statusButton.className = "read";
                 }
             })
-            
+    
             // Append button
             cardContent.appendChild(statusButton)
         }
