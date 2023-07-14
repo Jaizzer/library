@@ -93,6 +93,7 @@ function createCard(Book) {
 
     // Add action buttons inside card.
     cardContent = document.createElement("div");
+    cardContent.className = "actions";
 
     let editButton = document.createElement("button");
     editButton.className = "edit";
@@ -113,6 +114,6 @@ function createCard(Book) {
 
     // Append card content inside the card.
     card.appendChild(cardContent);
-    
+
     return card;
 }
