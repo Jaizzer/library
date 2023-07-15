@@ -63,7 +63,7 @@ function createCard(Book) {
     // Create card.
     let card = document.createElement("div");
     card.className = "card";
-    card.id = Book.id;
+    card.id = `code-${Book.id}`;
 
     // Create content inside the card.
     let cardContent;
