@@ -185,3 +185,9 @@ const formContainer = document.querySelector(".form-container");
 bookAdder.addEventListener("click", function() {
     formContainer.className = "form-container visible";
 });
+
+// Access cancel button.
+const cancelButton = document.querySelector("#cancel");
+cancelButton.addEventListener("click", function() {
+    formContainer.className = "form-container hidden";
+})
