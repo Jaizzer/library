@@ -30,3 +30,7 @@ body * {
     grid-gap: 10px;
     grid-auto-rows: 300px;
 }
+
+.hidden {
+    display: none;
+}
