@@ -174,7 +174,6 @@ function deleteBook(button) {
             myLibrary.splice(i, 1);
         }
     }
-    console.log(myLibrary);
 
     // Update myLibrary in local storage.
     localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
