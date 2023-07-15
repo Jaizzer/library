@@ -32,7 +32,10 @@ form.addEventListener("submit", event => {
     // Hide form when submitted.
     formContainer.className = "form-container hidden";
 
+    // Prevent page reload due to server submission.
     event.preventDefault();
+
+    // Render and save the book.
     addBookToLibrary();
 });
 
