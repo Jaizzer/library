@@ -23,15 +23,16 @@ form.addEventListener("submit", event => {
 });
 
 // Book constructor
-function Book(title, author, pageCount, status) {
+function Book(title, author, pageCount, status, id) {
     this.title = title;
     this.author = author;
     this.pageCount = pageCount;
     this.status = status;
+    this.id = id;
 }
 
 function addBookToLibrary() {
-    let currentBook = new Book(`${titleInput.value}`, `${authorInput.value}`, `${pageCountInput.value}`, `${statusInput.value}`)
+    let currentBook = new Book(`${titleInput.value}`, `${authorInput.value}`, `${pageCountInput.value}`, `${statusInput.value}`, `${Date.now()}`)
     myLibrary.push(currentBook);
     localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
     let card = createCard(currentBook);
@@ -44,6 +45,7 @@ function createCard(Book) {
     // Create card.
     let card = document.createElement("div");
     card.className = "card";
+    card.id = Book.id;
 
     // Create content inside the card.
     let cardContent;
