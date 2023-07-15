@@ -50,47 +50,50 @@ function createCard(Book) {
     // Create content inside the card.
     let cardContent;
     for (let property in Book) {
+        
+        // Only render non-id book info.
+        if (property !== "id") {
+            // Create div with class.
+            cardContent = document.createElement("div");
+            cardContent.className = `${property}`;
 
-        // Create div with class.
-        cardContent = document.createElement("div");
-        cardContent.className = `${property}`;
+            // The content is title.
+            if (property === "title"){
+                cardContent.textContent = `${Book[property]}`;
+            }
+            // The content is author.
+            else if (property === "author") {
+                cardContent.textContent = `By ${Book[property]}`; 
+            }
+            // The content is page count.
+            else if (property === "pageCount") {
+                cardContent.textContent = `${Book[property]} pages`;
+            }
+            // The content is status.
+            else if (property === "status") {
+                // Create button.
+                let statusButton = document.createElement("button");
+                statusButton.textContent = Book[property];
+                statusButton.className = (Book[property] === "Read") ? "read" : "not-read";
 
-        // The content is title.
-        if (property === "title"){
-            cardContent.textContent = `${Book[property]}`;
+                statusButton.addEventListener("click", ()=> {
+                    if (statusButton.textContent === "Read") {
+                        statusButton.textContent = "Not Read";
+                        statusButton.className = "not-read";
+                    }
+                    else {
+                        statusButton.textContent = "Read";
+                        statusButton.className = "read";
+                    }
+                })
+        
+                // Append button
+                cardContent.appendChild(statusButton)
+            }
+        
+            // Append card content inside the card.
+            card.appendChild(cardContent);
         }
-        // The content is author.
-        else if (property === "author") {
-            cardContent.textContent = `By ${Book[property]}`; 
-        }
-        // The content is page count.
-        else if (property === "pageCount") {
-            cardContent.textContent = `${Book[property]} pages`;
-        }
-        // The content is status.
-        else if (property === "status") {
-            // Create button.
-            let statusButton = document.createElement("button");
-            statusButton.textContent = Book[property];
-            statusButton.className = (Book[property] === "Read") ? "read" : "not-read";
-
-            statusButton.addEventListener("click", ()=> {
-                if (statusButton.textContent === "Read") {
-                    statusButton.textContent = "Not Read";
-                    statusButton.className = "not-read";
-                }
-                else {
-                    statusButton.textContent = "Read";
-                    statusButton.className = "read";
-                }
-            })
-    
-            // Append button
-            cardContent.appendChild(statusButton)
-        }
-    
-        // Append card content inside the card.
-        card.appendChild(cardContent);
     }
 
     // Add action buttons inside card.
