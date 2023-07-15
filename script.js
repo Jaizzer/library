@@ -28,6 +28,10 @@ window.addEventListener('load', function() {
 
 // Create the book from form input but don't submit to server.
 form.addEventListener("submit", event => {
+
+    // Hide form when submitted.
+    formContainer.className = "form-container hidden";
+
     event.preventDefault();
     addBookToLibrary();
 });
