@@ -148,6 +148,8 @@ function createCard(Book) {
     return card;
 }
 
+
+// This function deletes a book.
 function deleteBook(button) {
 
     // Get the id of the card containing the current buton.
