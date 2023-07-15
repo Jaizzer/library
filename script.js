@@ -11,6 +11,9 @@ const authorInput = document.querySelector("#author-input");
 const pageCountInput = document.querySelector("#page-count-input");
 const statusInput = document.querySelector("#status-input");
 
+// Access the book-adder container.
+const bookAdderDiv = document.querySelector(".book-adder-container");
+
 // This event is triggered everytime the page loads/reloads.
 window.addEventListener('load', function() {
 
