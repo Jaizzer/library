@@ -157,20 +157,17 @@ function createCard(Book) {
 
 
 // This function deletes a book.
-function deleteBook(button) {
-
-    // Get the id of the card containing the current buton.
-    let cardId = button.parentNode.parentNode.id
+function deleteBook(bookId) {
 
     // Get the corresponding card.
-    let card = document.querySelector(`#${cardId}`);
+    let card = document.querySelector(`#code-${cardId}`);
 
     // Delete the card.
     card.remove();
 
     // Remove the book in myLibrary
     for(let i = 0; i < myLibrary.length; i++){
-        if (myLibrary[i].id === `${cardId.split("-")[1]}`) {
+        if (myLibrary[i].id === bookId) {
             myLibrary.splice(i, 1);
         }
     }
