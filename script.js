@@ -172,3 +172,16 @@ function deleteBook(button) {
     // Update myLibrary in local storage.
     localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
 }
+
+
+
+// Access the book adding button.
+const bookAdder = document.querySelector(".book-adder");
+
+// Access the form conainter.
+const formContainer = document.querySelector(".form-container");
+
+// Popup the form when book adder is pressed.
+bookAdder.addEventListener("click", function() {
+    formContainer.className = "form-container visible";
+});
