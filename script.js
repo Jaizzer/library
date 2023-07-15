@@ -64,7 +64,7 @@ function addBookToLibrary() {
 
     // Render the corresponding the book's corresponding card in the main-content area.
     let card = createCard(currentBook);
-    mainContent.appendChild(card);
+    mainContent.insertBefore(card, bookAdderDiv);
 }
 
 // This function creates a card.
