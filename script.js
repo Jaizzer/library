@@ -144,7 +144,12 @@ function createCard(Book) {
     
     // Add functionality to the delete button.
     deleteButton.addEventListener('click', function() {
-        deleteBook(this);
+
+        // Get the id of the book corresponding to the current delete button.
+        let bookId = getBookId(this)
+
+        // Delete book.
+        deleteBook(bookId);
     })
     
     cardContent.appendChild(deleteButton);
