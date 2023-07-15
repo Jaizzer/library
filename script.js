@@ -165,7 +165,7 @@ function createCard(Book) {
 function deleteBook(bookId) {
 
     // Get the corresponding card.
-    let card = document.querySelector(`#code-${cardId}`);
+    let card = document.querySelector(`#code-${bookId}`);
 
     // Delete the card.
     card.remove();
