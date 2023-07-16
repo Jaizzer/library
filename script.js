@@ -270,13 +270,10 @@ function editBook(bookId) {
         // Modify the book in the array.
         for (let book of myLibrary) {
             if (book.id === bookId) {
-                console.log(book);
                 book.title = titleInput.value;
                 book.author = authorInput.value;
                 book.pageCount = pageCountInput.value;
                 book.status = statusInput.value;
-
-                console.log(book);
                 break;
             }
 
