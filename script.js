@@ -11,6 +11,9 @@ const authorInput = document.querySelector("#author-input");
 const pageCountInput = document.querySelector("#page-count-input");
 const statusInput = document.querySelector("#status-input");
 
+// Acces the form's submit button.
+const submitButton = document.querySelector("#submit-button");
+
 // Access the book-adder container.
 const bookAdderDiv = document.querySelector(".book-adder-container");
 
