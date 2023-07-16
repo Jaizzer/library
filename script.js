@@ -28,7 +28,7 @@ window.addEventListener('load', function() {
     // Render the cards.
     for (let book of myLibrary) {
         let card = createCard(book);
-        mainContent.appendChild(card);
+        mainContent.insertBefore(card, bookAdderDiv);
     }
 })
 
