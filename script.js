@@ -198,7 +198,7 @@ bookAdder.addEventListener("click", function() {
 
         // Render and save the book.
         addBookToLibrary();
-    });
+    }, {once: true});
 });
 
 // Access cancel button.
