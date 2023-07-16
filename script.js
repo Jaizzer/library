@@ -281,3 +281,12 @@ function editBook(bookId) {
 
     }, {once: true});
 }
+
+
+function clearForm() {
+    // Clear the input fields
+    titleInput.value = "";
+    authorInput.value = "";
+    pageCountInput.value = "";
+    statusInput.value = "";
+}
