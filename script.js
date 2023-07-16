@@ -186,7 +186,7 @@ bookAdder.addEventListener("click", function() {
     // Set the form feature to 'add' instead of edit.
     form.className = "add";
 
-    
+
     // Create the book from form input but don't submit to server.
     form.addEventListener("submit", function doTheAddFeature(event) {
 
@@ -216,4 +216,54 @@ function getBookId(button) {
 
     // Get the book ID.
     return parentCardId.split("-")[1];
+}
+
+
+// This function edits a book.
+function editBook(bookId) {
+
+    // Get the corresponding card.
+    let card = document.querySelector(`#code-${bookId}`);
+
+    // Populate the edit-form with the book's current values.
+    for (let book of myLibrary) {
+        if (book.id === bookId) {
+            titleInput.value = book.title;
+            authorInput.value = book.author;
+            pageCountInput.value = book.pageCount;
+            statusInput.value = book.status;
+            break;
+        }
+    }
+
+    // Modify classes of form and formContainer for 'edit' functionality.
+    form.className = "edit";
+    formContainer.textContent= "form-container visible";
+
+    // Change the button caption to 'edit' instead of 'add'.
+    submitButton.textContent = "Edit Book"; 
+
+    // Attach an editing feature to the form.
+    form.addEventListener('submit', function(event) {
+
+        event.preventDefault();
+        // Modify the book in the array.
+        for (let book of myLibrary) {
+            if (book.id === bookId) {
+                console.log(book);
+                book.title = titleInput.value;
+                book.author = authorInput.value;
+                book.pageCount = pageCountInput.value;
+                book.status = statusInput.value;
+
+                console.log(book);
+                break;
+            }
+
+        }
+
+        localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+        location.reload();
+
+    }, {once: true});
 }
