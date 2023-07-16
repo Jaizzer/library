@@ -252,7 +252,7 @@ function editBook(bookId) {
 
     // Modify classes of form and formContainer for 'edit' functionality.
     form.className = "edit";
-    formContainer.textContent= "form-container visible";
+    formContainer.className = "form-container visible";
 
     // Change the button caption to 'edit' instead of 'add'.
     submitButton.textContent = "Edit Book"; 
