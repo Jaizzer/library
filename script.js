@@ -258,7 +258,7 @@ function editBook(bookId) {
     submitButton.textContent = "Edit Book"; 
 
     // Attach an editing feature to the form.
-    form.addEventListener('submit', function(event) {
+    form.addEventListener('submit', function doTheEditFeature(event) {
 
         event.preventDefault();
         // Modify the book in the array.
