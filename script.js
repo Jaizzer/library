@@ -29,19 +29,6 @@ window.addEventListener('load', function() {
     }
 })
 
-// Create the book from form input but don't submit to server.
-form.addEventListener("submit", event => {
-
-    // Hide form when submitted.
-    formContainer.className = "form-container hidden";
-
-    // Prevent page reload due to server submission.
-    event.preventDefault();
-
-    // Render and save the book.
-    addBookToLibrary();
-});
-
 // Book constructor
 function Book(title, author, pageCount, status, id) {
     this.title = title;
@@ -198,6 +185,20 @@ bookAdder.addEventListener("click", function() {
 
     // Set the form feature to 'add' instead of edit.
     form.className = "add";
+
+    
+    // Create the book from form input but don't submit to server.
+    form.addEventListener("submit", event => {
+
+        // Hide form when submitted.
+        formContainer.className = "form-container hidden";
+
+        // Prevent page reload due to server submission.
+        event.preventDefault();
+
+        // Render and save the book.
+        addBookToLibrary();
+    });
 });
 
 // Access cancel button.
