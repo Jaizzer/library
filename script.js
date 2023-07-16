@@ -55,6 +55,9 @@ function addBookToLibrary() {
     // Render the corresponding the book's corresponding card in the main-content area.
     let card = createCard(currentBook);
     mainContent.insertBefore(card, bookAdderDiv);
+
+    // Clear the form.
+    clearForm()
 }
 
 // This function creates a card.
@@ -219,6 +222,9 @@ bookAdder.addEventListener("click", function() {
 const cancelButton = document.querySelector("#cancel");
 cancelButton.addEventListener("click", function() {
     formContainer.className = "form-container hidden";
+
+      // Clear the form.
+      clearForm()
 })
 
 
