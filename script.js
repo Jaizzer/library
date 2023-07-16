@@ -195,6 +195,9 @@ const formContainer = document.querySelector(".form-container");
 // Popup the form when book adder is pressed.
 bookAdder.addEventListener("click", function() {
     formContainer.className = "form-container visible";
+
+    // Set the form feature to 'add' instead of edit.
+    form.className = "add";
 });
 
 // Access cancel button.
