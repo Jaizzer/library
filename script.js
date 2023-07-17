@@ -205,18 +205,21 @@ bookAdder.addEventListener("click", function() {
 
 
     // Create the book from form input but don't submit to server.
-    form.addEventListener("submit", function doTheAddFeature(event) {
-
-        // Hide form when submitted.
-        formContainer.className = "form-container hidden";
-
-        // Prevent page reload due to server submission.
-        event.preventDefault();
-
-        // Render and save the book.
-        addBookToLibrary();
-    }, {once: true});
+    form.addEventListener("submit", doTheAddFeature);
 });
+
+
+function doTheAddFeature() {
+
+    // Hide form when submitted.
+    formContainer.className = "form-container hidden";
+
+    // Prevent page reload due to server submission.
+    event.preventDefault();
+
+    // Render and save the book.
+    addBookToLibrary();
+}
 
 // Access cancel button.
 const cancelButton = document.querySelector("#cancel");
