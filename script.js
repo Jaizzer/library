@@ -24,8 +24,6 @@ const bookAdderDiv = document.querySelector(".book-adder-container");
 let bookId;
 
 
-
-
 // Book constructor
 function Book(title, author, pageCount, status, id) {
     this.title = title;
@@ -67,9 +65,6 @@ cancelButton.addEventListener("click", function() {
     // Clear the form.
     clearForm()
 })
-
-
-
 
 
 
@@ -168,7 +163,6 @@ function editBook() {
     // Reload page to see changes.
     location.reload();
 }
-
 
 
 
@@ -302,6 +296,7 @@ function createCard(Book) {
 }
 
 
+
 // This function clears the input fields
 function clearForm() {
     titleInput.value = "";
@@ -309,6 +304,7 @@ function clearForm() {
     pageCountInput.value = "";
     statusInput.value = "";
 }
+
 
 
 // Get the corresponding ID of the book in the card.
