@@ -267,25 +267,26 @@ function enableEditFeature(bookId) {
     submitButton.textContent = "Edit Book"; 
 
     // Attach an editing feature to the form.
-    form.addEventListener('submit', function doTheEditFeature(event) {
+    form.addEventListener('submit', , {once: true});
+}
 
-        event.preventDefault();
-        // Modify the book in the array.
-        for (let book of myLibrary) {
-            if (book.id === bookId) {
-                book.title = titleInput.value;
-                book.author = authorInput.value;
-                book.pageCount = pageCountInput.value;
-                book.status = statusInput.value;
-                break;
-            }
 
+function doTheEditFeature(bookId) {
+    event.preventDefault();
+    // Modify the book in the array.
+    for (let book of myLibrary) {
+        if (book.id === bookId) {
+            book.title = titleInput.value;
+            book.author = authorInput.value;
+            book.pageCount = pageCountInput.value;
+            book.status = statusInput.value;
+            break;
         }
 
-        localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
-        location.reload();
+    }
 
-    }, {once: true});
+    localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+    location.reload();
 }
 
 
