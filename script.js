@@ -51,6 +51,19 @@ const bookAdder = document.querySelector(".book-adder");
 // Prepare the form for book adding mode.
 bookAdder.addEventListener("click", setFormToAddMode);
 
+
+// Access cancel button.
+const cancelButton = document.querySelector("#cancel");
+cancelButton.addEventListener("click", function() {
+
+    // Hide the form.
+    formContainer.className = "form-container hidden";
+
+    // Clear the form.
+     clearForm()
+})
+
+
 // Access the form conainter.
 const formContainer = document.querySelector(".form-container");
 
@@ -175,19 +188,6 @@ function deleteBook() {
     // Update myLibrary in local storage.
     localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
 }
-
-
-
-// Access cancel button.
-const cancelButton = document.querySelector("#cancel");
-cancelButton.addEventListener("click", function() {
-
-    // Hide the form.
-    formContainer.className = "form-container hidden";
-
-    // Clear the form.
-     clearForm()
-})
 
 
 
