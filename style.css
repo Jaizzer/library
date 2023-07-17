@@ -39,7 +39,7 @@ body * {
     grid-auto-rows: 300px;
 }
 
-.hidden {
+.form-container.hidden {
     display: none;
 }
 
