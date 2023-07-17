@@ -77,6 +77,10 @@ function setFormToAddMode() {
     // Pop-up the form.
     formContainer.className = "form-container visible";
 
+
+    // Remove the 'edit' feature of the form if there is any attached.
+    form.removeEventListener('submit', editBook);
+
     // Create the book from form input but don't submit to server.
     form.addEventListener("submit", addBook);
 }
@@ -135,6 +139,10 @@ function setFormToEditMode() {
 
     // Change the button caption to 'edit' instead of 'add'.
     submitButton.textContent = "Edit Book"; 
+
+
+    // Remove the 'add' feature of the form if there is any attached.
+    form.removeEventListener('submit', addBook);
 
     // Attach an editing feature to the form when submitted.
     form.addEventListener('submit', editBook);
