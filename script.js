@@ -44,24 +44,6 @@ function Book(title, author, pageCount, status, id) {
     this.id = id;
 }
 
-// This function saves new book object in myLibrary array and also renders it in a card.
-function addBookToLibrary() {
-    // Create a book object.
-    let currentBook = new Book(`${titleInput.value}`, `${authorInput.value}`, `${pageCountInput.value}`, `${statusInput.value}`, `${Date.now()}`)
-
-    // Add the book object to the myLibrary array.
-    myLibrary.push(currentBook);
-
-    // Update myLibrary in local storage.
-    localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
-
-    // Render the corresponding the book's corresponding card in the main-content area.
-    let card = createCard(currentBook);
-    mainContent.insertBefore(card, bookAdderDiv);
-
-    // Clear the form.
-    clearForm()
-}
 
 // This function creates a card.
 function createCard(Book) {
@@ -223,8 +205,21 @@ function enableFormAddFeature() {
     // Prevent page reload due to server submission.
     event.preventDefault();
 
-    // Render and save the book.
-    addBookToLibrary();
+    // Create a book object.
+    let currentBook = new Book(`${titleInput.value}`, `${authorInput.value}`, `${pageCountInput.value}`, `${statusInput.value}`, `${Date.now()}`)
+
+    // Add the book object to the myLibrary array.
+    myLibrary.push(currentBook);
+
+    // Update myLibrary in local storage.
+    localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+
+    // Render the corresponding the book's corresponding card in the main-content area.
+    let card = createCard(currentBook);
+    mainContent.insertBefore(card, bookAdderDiv);
+
+    // Clear the form.
+    clearForm();
 }
 
 // Access cancel button.
