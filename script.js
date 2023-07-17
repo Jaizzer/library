@@ -136,7 +136,7 @@ function createCard(Book) {
     editButton.addEventListener('click', function() {
 
         // Get the id of the book corresponding to the current delete button.
-        let bookId = getBookId(this)
+        bookId = getBookId(this)
 
         // Delete book.
         setFormToEditMode(bookId);
@@ -156,7 +156,7 @@ function createCard(Book) {
     deleteButton.addEventListener('click', function() {
 
         // Get the id of the book corresponding to the current delete button.
-        let bookId = getBookId(this)
+        bookId = getBookId(this)
 
         // Delete book.
         deleteBook(bookId);
