@@ -48,11 +48,12 @@ function Book(title, author, pageCount, status, id) {
 // Access the book adding button.
 const bookAdder = document.querySelector(".book-adder");
 
+// Prepare the form for book adding mode.
+bookAdder.addEventListener("click", setFormToAddMode);
+
 // Access the form conainter.
 const formContainer = document.querySelector(".form-container");
 
-// Prepare the form for book adding mode.
-bookAdder.addEventListener("click", setFormToAddMode);
 
 
 
