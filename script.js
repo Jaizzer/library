@@ -35,7 +35,8 @@ function Book(title, author, pageCount, status, id) {
     this.id = id;
 }
 
-// This event is triggered everytime the page loads/reloads.
+
+// Render the library when page loads.
 window.addEventListener('load', function() {
 
     // Obtain previously saved contents of myLibrary array.
