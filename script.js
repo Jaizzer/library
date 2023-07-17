@@ -267,7 +267,7 @@ function enableFormEditFeature(bookId) {
     submitButton.textContent = "Edit Book"; 
 
     // Attach an editing feature to the form.
-    form.addEventListener('submit', , {once: true});
+    form.addEventListener('submit', );
 }
 
 
