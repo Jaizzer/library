@@ -52,7 +52,7 @@ const bookAdder = document.querySelector(".book-adder");
 bookAdder.addEventListener("click", setFormToAddMode);
 
 
-// Access cancel button.
+// Access cancel button and add feature that hides form when pressed.
 const cancelButton = document.querySelector("#cancel");
 cancelButton.addEventListener("click", function() {
 
@@ -60,7 +60,7 @@ cancelButton.addEventListener("click", function() {
     formContainer.className = "form-container hidden";
 
     // Clear the form.
-     clearForm()
+    clearForm()
 })
 
 
