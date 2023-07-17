@@ -199,13 +199,14 @@ const bookAdder = document.querySelector(".book-adder");
 // Access the form conainter.
 const formContainer = document.querySelector(".form-container");
 
-// Popup the form when book adder is pressed.
+// Prepare the form for book adding mode.
 bookAdder.addEventListener("click", function() {
-    formContainer.className = "form-container visible";
 
     // Set the form feature to 'add' instead of edit.
     form.className = "add";
 
+    // Pop-up the form.
+    formContainer.className = "form-container visible";
 
     // Create the book from form input but don't submit to server.
     form.addEventListener("submit", enableFormAddFeature);
