@@ -17,6 +17,9 @@ const submitButton = document.querySelector("#submit-button");
 // Access the book-adder container.
 const bookAdderDiv = document.querySelector(".book-adder-container");
 
+// Create variable to store book id of the book to be edited or deleted.
+let bookId;
+
 // This event is triggered everytime the page loads/reloads.
 window.addEventListener('load', function() {
 
