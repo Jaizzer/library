@@ -182,10 +182,10 @@ const bookAdder = document.querySelector(".book-adder");
 const formContainer = document.querySelector(".form-container");
 
 // Prepare the form for book adding mode.
-bookAdder.addEventListener("click", setToAddMode);
+bookAdder.addEventListener("click", setFormToAddMode);
 
 
-function setToAddMode() {
+function setFormToAddMode() {
     // Set the form feature to 'add' instead of edit.
     form.className = "add";
 
