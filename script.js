@@ -170,6 +170,19 @@ function deleteBook() {
 }
 
 
+// Access cancel button.
+const cancelButton = document.querySelector("#cancel");
+cancelButton.addEventListener("click", function() {
+
+    // Hide the form.
+    formContainer.className = "form-container hidden";
+
+    // Clear the form.
+     clearForm()
+})
+
+
+
 
 
 // This function creates a card.
@@ -283,17 +296,6 @@ function createCard(Book) {
 
 
 
-
-// Access cancel button.
-const cancelButton = document.querySelector("#cancel");
-cancelButton.addEventListener("click", function() {
-
-    // Hide the form.
-    formContainer.className = "form-container hidden";
-
-    // Clear the form.
-     clearForm()
-})
 
 
 // This function clears the input fields
