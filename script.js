@@ -149,6 +149,25 @@ function editBook() {
 }
 
 
+// This function deletes a book.
+function deleteBook() {
+
+    // Get the corresponding card.
+    let card = document.querySelector(`#code-${bookId}`);
+
+    // Delete the card.
+    card.remove();
+
+    // Remove the book in myLibrary
+    for (let i = 0; i < myLibrary.length; i++){
+        if (myLibrary[i].id === bookId) {
+            myLibrary.splice(i, 1);
+        }
+    }
+
+    // Update myLibrary in local storage.
+    localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+}
 
 
 
@@ -261,25 +280,6 @@ function createCard(Book) {
 }
 
 
-// This function deletes a book.
-function deleteBook() {
-
-    // Get the corresponding card.
-    let card = document.querySelector(`#code-${bookId}`);
-
-    // Delete the card.
-    card.remove();
-
-    // Remove the book in myLibrary
-    for (let i = 0; i < myLibrary.length; i++){
-        if (myLibrary[i].id === bookId) {
-            myLibrary.splice(i, 1);
-        }
-    }
-
-    // Update myLibrary in local storage.
-    localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
-}
 
 
 
