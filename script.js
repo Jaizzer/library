@@ -205,11 +205,11 @@ bookAdder.addEventListener("click", function() {
 
 
     // Create the book from form input but don't submit to server.
-    form.addEventListener("submit", doTheAddFeature);
+    form.addEventListener("submit", enableFormAddFeature);
 });
 
 
-function doTheAddFeature() {
+function enableFormAddFeature() {
 
     // Hide form when submitted.
     formContainer.className = "form-container hidden";
