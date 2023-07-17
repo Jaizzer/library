@@ -45,10 +45,8 @@ function Book(title, author, pageCount, status, id) {
     this.id = id;
 }
 
-// Access the book adding button.
+// Access the book adding button and add feature that pops-up a form for adding book.
 const bookAdder = document.querySelector(".book-adder");
-
-// Prepare the form for book adding mode.
 bookAdder.addEventListener("click", setFormToAddMode);
 
 
