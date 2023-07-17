@@ -36,6 +36,15 @@ window.addEventListener('load', function() {
 });
 
 
+// Book constructor
+function Book(title, author, pageCount, status, id) {
+    this.title = title;
+    this.author = author;
+    this.pageCount = pageCount;
+    this.status = status;
+    this.id = id;
+}
+
 // Access the book adding button.
 const bookAdder = document.querySelector(".book-adder");
 
@@ -141,14 +150,7 @@ function editBook() {
 
 
 
-// Book constructor
-function Book(title, author, pageCount, status, id) {
-    this.title = title;
-    this.author = author;
-    this.pageCount = pageCount;
-    this.status = status;
-    this.id = id;
-}
+
 
 
 // This function creates a card.
