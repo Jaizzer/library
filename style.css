@@ -71,3 +71,7 @@ form > div {
     display: flex;
     justify-content: space-between;
 }
+
+input, select {
+    width: 150px;
+}
