@@ -193,11 +193,11 @@ function setToAddMode() {
     formContainer.className = "form-container visible";
 
     // Create the book from form input but don't submit to server.
-    form.addEventListener("submit", enableFormAddFeature);
+    form.addEventListener("submit", addBook);
 }
 
 
-function enableFormAddFeature() {
+function addBook() {
 
     // Hide form when submitted.
     formContainer.className = "form-container hidden";
