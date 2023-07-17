@@ -225,10 +225,12 @@ function addBook() {
 // Access cancel button.
 const cancelButton = document.querySelector("#cancel");
 cancelButton.addEventListener("click", function() {
+
+    // Hide the form.
     formContainer.className = "form-container hidden";
 
-      // Clear the form.
-      clearForm()
+    // Clear the form.
+     clearForm()
 })
 
 // This function prepares the form for editing mode.
