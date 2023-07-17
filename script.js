@@ -23,6 +23,18 @@ const bookAdderDiv = document.querySelector(".book-adder-container");
 // Create variable to store book id of the book to be edited or deleted.
 let bookId;
 
+
+
+
+// Book constructor
+function Book(title, author, pageCount, status, id) {
+    this.title = title;
+    this.author = author;
+    this.pageCount = pageCount;
+    this.status = status;
+    this.id = id;
+}
+
 // This event is triggered everytime the page loads/reloads.
 window.addEventListener('load', function() {
 
@@ -38,15 +50,6 @@ window.addEventListener('load', function() {
     }
 });
 
-
-// Book constructor
-function Book(title, author, pageCount, status, id) {
-    this.title = title;
-    this.author = author;
-    this.pageCount = pageCount;
-    this.status = status;
-    this.id = id;
-}
 
 // Access the book adding button and add feature that pops-up a form for adding book.
 const bookAdder = document.querySelector(".book-adder");
