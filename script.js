@@ -159,7 +159,7 @@ function createCard(Book) {
         bookId = getBookId(this)
 
         // Delete book.
-        deleteBook(bookId);
+        deleteBook();
     })
     
     cardContent.appendChild(deleteButton);
@@ -172,7 +172,7 @@ function createCard(Book) {
 
 
 // This function deletes a book.
-function deleteBook(bookId) {
+function deleteBook() {
 
     // Get the corresponding card.
     let card = document.querySelector(`#code-${bookId}`);
@@ -246,7 +246,7 @@ function getBookId(button) {
 
 
 // This function edits a book.
-function setFormToEditMode(bookId) {
+function setFormToEditMode() {
 
     // Get the corresponding card.
     let card = document.querySelector(`#code-${bookId}`);
@@ -276,7 +276,7 @@ function setFormToEditMode(bookId) {
 
 
 
-function editBook(bookId) {
+function editBook() {
     event.preventDefault();
     // Modify the book in the array.
     for (let book of myLibrary) {
