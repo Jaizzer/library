@@ -265,10 +265,13 @@ function setFormToEditMode() {
 
 
 
-
+// Edit Book.
 function editBook() {
+
+    // Prevent form's default server submission.
     event.preventDefault();
-    // Modify the book in the array.
+
+    // Modify the book in the myLibrary array.
     for (let book of myLibrary) {
         if (book.id === bookId) {
             book.title = titleInput.value;
@@ -277,10 +280,11 @@ function editBook() {
             book.status = statusInput.value;
             break;
         }
-
     }
-
+    // Save changes to local storage.
     localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+
+    // Reload page to see changes.
     location.reload();
 }
 
