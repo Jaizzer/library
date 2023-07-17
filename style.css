@@ -9,6 +9,11 @@
     --accent: #5c57b2;
 }
 
+body {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
 body * {
     font-family: 'Roboto', sans-serif;
     background-color: var(--background);
