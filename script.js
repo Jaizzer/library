@@ -54,6 +54,8 @@ const formContainer = document.querySelector(".form-container");
 // Prepare the form for book adding mode.
 bookAdder.addEventListener("click", setFormToAddMode);
 
+
+
 // This function prepares the form to book adding mode.
 function setFormToAddMode() {
 
@@ -66,6 +68,7 @@ function setFormToAddMode() {
     // Create the book from form input but don't submit to server.
     form.addEventListener("submit", addBook);
 }
+
 
 // This function adds a book.
 function addBook() {
@@ -92,6 +95,7 @@ function addBook() {
     // Clear the form.
     clearForm();
 }
+
 
 
 // This function prepares the form for editing mode.
@@ -149,6 +153,8 @@ function editBook() {
 }
 
 
+
+
 // This function deletes a book.
 function deleteBook() {
 
@@ -170,6 +176,7 @@ function deleteBook() {
 }
 
 
+
 // Access cancel button.
 const cancelButton = document.querySelector("#cancel");
 cancelButton.addEventListener("click", function() {
@@ -180,8 +187,6 @@ cancelButton.addEventListener("click", function() {
     // Clear the form.
      clearForm()
 })
-
-
 
 
 
@@ -291,11 +296,6 @@ function createCard(Book) {
 
     return card;
 }
-
-
-
-
-
 
 
 // This function clears the input fields
