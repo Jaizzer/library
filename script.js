@@ -200,8 +200,10 @@ const bookAdder = document.querySelector(".book-adder");
 const formContainer = document.querySelector(".form-container");
 
 // Prepare the form for book adding mode.
-bookAdder.addEventListener("click", function() {
+bookAdder.addEventListener("click", setToAddMode);
 
+
+function setToAddMode() {
     // Set the form feature to 'add' instead of edit.
     form.className = "add";
 
@@ -210,7 +212,7 @@ bookAdder.addEventListener("click", function() {
 
     // Create the book from form input but don't submit to server.
     form.addEventListener("submit", enableFormAddFeature);
-});
+}
 
 
 function enableFormAddFeature() {
