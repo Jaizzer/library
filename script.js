@@ -271,7 +271,9 @@ function enableEditFeature(bookId) {
 }
 
 
-function doTheEditFeature(bookId) {
+
+
+function editBook(bookId) {
     event.preventDefault();
     // Modify the book in the array.
     for (let book of myLibrary) {
