@@ -35,6 +35,112 @@ window.addEventListener('load', function() {
     }
 });
 
+
+// Access the book adding button.
+const bookAdder = document.querySelector(".book-adder");
+
+// Access the form conainter.
+const formContainer = document.querySelector(".form-container");
+
+// Prepare the form for book adding mode.
+bookAdder.addEventListener("click", setFormToAddMode);
+
+
+function setFormToAddMode() {
+    // Set the form feature to 'add' instead of edit.
+    form.className = "add";
+
+    // Pop-up the form.
+    formContainer.className = "form-container visible";
+
+    // Create the book from form input but don't submit to server.
+    form.addEventListener("submit", addBook);
+}
+
+
+function addBook() {
+
+    // Hide form when submitted.
+    formContainer.className = "form-container hidden";
+
+    // Prevent page reload due to server submission.
+    event.preventDefault();
+
+    // Create a book object.
+    let currentBook = new Book(`${titleInput.value}`, `${authorInput.value}`, `${pageCountInput.value}`, `${statusInput.value}`, `${Date.now()}`)
+
+    // Add the book object to the myLibrary array.
+    myLibrary.push(currentBook);
+
+    // Update myLibrary in local storage.
+    localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+
+    // Render the corresponding the book's corresponding card in the main-content area.
+    let card = createCard(currentBook);
+    mainContent.insertBefore(card, bookAdderDiv);
+
+    // Clear the form.
+    clearForm();
+}
+
+
+// This function prepares the form for editing mode.
+function setFormToEditMode() {
+
+    // Get the corresponding card.
+    let card = document.querySelector(`#code-${bookId}`);
+
+    // Populate the edit-form with the book's current values.
+    for (let book of myLibrary) {
+        if (book.id === bookId) {
+            titleInput.value = book.title;
+            authorInput.value = book.author;
+            pageCountInput.value = book.pageCount;
+            statusInput.value = book.status;
+            break;
+        }
+    }
+
+    // Modify classes of form and formContainer for 'edit' functionality.
+    form.className = "edit";
+
+    // Pop-up the form.
+    formContainer.className = "form-container visible";
+
+    // Change the button caption to 'edit' instead of 'add'.
+    submitButton.textContent = "Edit Book"; 
+
+    // Attach an editing feature to the form when submitted.
+    form.addEventListener('submit', editBook);
+}
+
+
+
+// Edit Book.
+function editBook() {
+
+    // Prevent form's default server submission.
+    event.preventDefault();
+
+    // Modify the book in the myLibrary array.
+    for (let book of myLibrary) {
+        if (book.id === bookId) {
+            book.title = titleInput.value;
+            book.author = authorInput.value;
+            book.pageCount = pageCountInput.value;
+            book.status = statusInput.value;
+            break;
+        }
+    }
+    // Save changes to local storage.
+    localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+
+    // Reload page to see changes.
+    location.reload();
+}
+
+
+
 // Book constructor
 function Book(title, author, pageCount, status, id) {
     this.title = title;
@@ -175,52 +281,6 @@ function deleteBook() {
 
 
 
-// Access the book adding button.
-const bookAdder = document.querySelector(".book-adder");
-
-// Access the form conainter.
-const formContainer = document.querySelector(".form-container");
-
-// Prepare the form for book adding mode.
-bookAdder.addEventListener("click", setFormToAddMode);
-
-
-function setFormToAddMode() {
-    // Set the form feature to 'add' instead of edit.
-    form.className = "add";
-
-    // Pop-up the form.
-    formContainer.className = "form-container visible";
-
-    // Create the book from form input but don't submit to server.
-    form.addEventListener("submit", addBook);
-}
-
-
-function addBook() {
-
-    // Hide form when submitted.
-    formContainer.className = "form-container hidden";
-
-    // Prevent page reload due to server submission.
-    event.preventDefault();
-
-    // Create a book object.
-    let currentBook = new Book(`${titleInput.value}`, `${authorInput.value}`, `${pageCountInput.value}`, `${statusInput.value}`, `${Date.now()}`)
-
-    // Add the book object to the myLibrary array.
-    myLibrary.push(currentBook);
-
-    // Update myLibrary in local storage.
-    localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
-
-    // Render the corresponding the book's corresponding card in the main-content area.
-    let card = createCard(currentBook);
-    mainContent.insertBefore(card, bookAdderDiv);
-
-    // Clear the form.
-    clearForm();
-}
 
 // Access cancel button.
 const cancelButton = document.querySelector("#cancel");
@@ -232,61 +292,6 @@ cancelButton.addEventListener("click", function() {
     // Clear the form.
      clearForm()
 })
-
-// This function prepares the form for editing mode.
-function setFormToEditMode() {
-
-    // Get the corresponding card.
-    let card = document.querySelector(`#code-${bookId}`);
-
-    // Populate the edit-form with the book's current values.
-    for (let book of myLibrary) {
-        if (book.id === bookId) {
-            titleInput.value = book.title;
-            authorInput.value = book.author;
-            pageCountInput.value = book.pageCount;
-            statusInput.value = book.status;
-            break;
-        }
-    }
-
-    // Modify classes of form and formContainer for 'edit' functionality.
-    form.className = "edit";
-
-    // Pop-up the form.
-    formContainer.className = "form-container visible";
-
-    // Change the button caption to 'edit' instead of 'add'.
-    submitButton.textContent = "Edit Book"; 
-
-    // Attach an editing feature to the form when submitted.
-    form.addEventListener('submit', editBook);
-}
-
-
-
-// Edit Book.
-function editBook() {
-
-    // Prevent form's default server submission.
-    event.preventDefault();
-
-    // Modify the book in the myLibrary array.
-    for (let book of myLibrary) {
-        if (book.id === bookId) {
-            book.title = titleInput.value;
-            book.author = authorInput.value;
-            book.pageCount = pageCountInput.value;
-            book.status = statusInput.value;
-            break;
-        }
-    }
-    // Save changes to local storage.
-    localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
-
-    // Reload page to see changes.
-    location.reload();
-}
 
 
 // This function clears the input fields
