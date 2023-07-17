@@ -233,18 +233,6 @@ cancelButton.addEventListener("click", function() {
       clearForm()
 })
 
-
-// Get the corresponding ID of the book in the card.
-function getBookId(button) {
-
-    // Get the parent card's id.
-    let parentCardId =  button.parentNode.parentNode.id;
-
-    // Get the book ID.
-    return parentCardId.split("-")[1];
-}
-
-
 // This function prepares the form for editing mode.
 function setFormToEditMode() {
 
@@ -303,4 +291,15 @@ function clearForm() {
     authorInput.value = "";
     pageCountInput.value = "";
     statusInput.value = "";
+}
+
+
+// Get the corresponding ID of the book in the card.
+function getBookId(button) {
+
+    // Get the parent card's id.
+    let parentCardId =  button.parentNode.parentNode.id;
+
+    // Get the book ID.
+    return parentCardId.split("-")[1];
 }
