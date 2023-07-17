@@ -65,6 +65,8 @@ body * {
 
 form {
     background-color: var(--secondary);
+    width: 250px;
+    height: 230px;
 }
 
 form > div {
