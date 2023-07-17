@@ -45,8 +45,9 @@ const formContainer = document.querySelector(".form-container");
 // Prepare the form for book adding mode.
 bookAdder.addEventListener("click", setFormToAddMode);
 
-
+// This function prepares the form to book adding mode.
 function setFormToAddMode() {
+
     // Set the form feature to 'add' instead of edit.
     form.className = "add";
 
@@ -57,7 +58,7 @@ function setFormToAddMode() {
     form.addEventListener("submit", addBook);
 }
 
-
+// This function adds a book.
 function addBook() {
 
     // Hide form when submitted.
@@ -115,8 +116,7 @@ function setFormToEditMode() {
 }
 
 
-
-// Edit Book.
+// This function edits a book.
 function editBook() {
 
     // Prevent form's default server submission.
