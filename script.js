@@ -33,7 +33,7 @@ window.addEventListener('load', function() {
         let card = createCard(book);
         mainContent.insertBefore(card, bookAdderDiv);
     }
-})
+});
 
 // Book constructor
 function Book(title, author, pageCount, status, id) {
@@ -118,7 +118,7 @@ function createCard(Book) {
     editButton.addEventListener('click', function() {
 
         // Get the id of the book corresponding to the current delete button.
-        bookId = getBookId(this)
+        bookId = getBookId(this);
 
         // Delete book.
         setFormToEditMode(bookId);
@@ -138,7 +138,7 @@ function createCard(Book) {
     deleteButton.addEventListener('click', function() {
 
         // Get the id of the book corresponding to the current delete button.
-        bookId = getBookId(this)
+        bookId = getBookId(this);
 
         // Delete book.
         deleteBook();
@@ -163,7 +163,7 @@ function deleteBook() {
     card.remove();
 
     // Remove the book in myLibrary
-    for(let i = 0; i < myLibrary.length; i++){
+    for (let i = 0; i < myLibrary.length; i++){
         if (myLibrary[i].id === bookId) {
             myLibrary.splice(i, 1);
         }
