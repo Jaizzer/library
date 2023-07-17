@@ -289,8 +289,8 @@ function editBook() {
 }
 
 
+// This function clears the input fields
 function clearForm() {
-    // Clear the input fields
     titleInput.value = "";
     authorInput.value = "";
     pageCountInput.value = "";
