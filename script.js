@@ -136,7 +136,7 @@ function createCard(Book) {
         let bookId = getBookId(this)
 
         // Delete book.
-        editBook(bookId);
+        enableEditFeature(bookId);
     })
 
     cardContent.appendChild(editButton);
@@ -243,7 +243,7 @@ function getBookId(button) {
 
 
 // This function edits a book.
-function editBook(bookId) {
+function enableEditFeature(bookId) {
 
     // Get the corresponding card.
     let card = document.querySelector(`#code-${bookId}`);
