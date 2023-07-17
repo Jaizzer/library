@@ -4,6 +4,9 @@ let myLibrary = [];
 // Access the main content area for appending cards later.
 let mainContent = document.querySelector(".main-content");
 
+// Access the form conainter.
+const formContainer = document.querySelector(".form-container");
+
 // Access the form section and inputs.
 const form = document.querySelector("form");
 const titleInput = document.querySelector("#title-input");
@@ -62,8 +65,6 @@ cancelButton.addEventListener("click", function() {
 })
 
 
-// Access the form conainter.
-const formContainer = document.querySelector(".form-container");
 
 
 
