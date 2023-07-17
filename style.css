@@ -66,3 +66,8 @@ body * {
 form {
     background-color: var(--secondary);
 }
+
+form > div {
+    display: flex;
+    justify-content: space-between;
+}
