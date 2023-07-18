@@ -137,12 +137,11 @@ function setFormToEditMode() {
     // Modify classes of form and formContainer for 'edit' functionality.
     form.className = "edit";
 
-    // Pop-up the form.
-    formContainer.className = "form-container visible";
-
     // Change the button caption to 'edit' instead of 'add'.
     submitButton.textContent = "Edit Book"; 
 
+    // Pop-up the form.
+    formContainer.className = "form-container visible";
 
     // Remove the 'add' feature of the form if there is any attached.
     form.removeEventListener('submit', addBook);
