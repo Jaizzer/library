@@ -125,6 +125,37 @@ form button {
     font-size: 20px;
 }
 
+.card button {
+    border: 1px solid var(--primary);
+    border-radius: 3px;
+
+    background-color: var(--primary);
+
+    color: white;
+}
+
+.card button:hover {
+    border-color: #2e2b58;
+    background-color: #2e2b58;
+}
+
+.card .icon {
+    fill: white;
+}
+
+.card > .status button {
+    height: 20px;
+    width: 80px;
+}
+
+.card > .actions {
+
+    width: 100%;
+    margin-top: 50px;
+    display: grid;
+    gap: 10px;
+}
+
 .book-adder-container {
     border-radius: 10px;
     border: 2px solid var(--background);
