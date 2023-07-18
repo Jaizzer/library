@@ -158,6 +158,10 @@ form button:hover {
     font-size: 20px;
 }
 
+.pageCount {
+    font-size: 14px;
+}
+
 .card button {
     border: 1px solid var(--primary);
     border-radius: 3px;
