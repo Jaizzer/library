@@ -180,7 +180,7 @@ form button {
 
 .book-adder-container {
     border-radius: 10px;
-    border: 2px solid var(--background);
+    border: 2px solid var(--secondary);
 
     display: grid;
     justify-content: center;
