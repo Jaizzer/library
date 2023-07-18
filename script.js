@@ -244,6 +244,15 @@ function createCard(Book) {
                         statusButton.textContent = "Read";
                         statusButton.className = "read";
                     }
+                    // Modify the book in the myLibrary array.
+                    for (let book of myLibrary) {
+                        if (book.id === Book.id) {
+                            book.status = statusButton.textContent;
+                            break;
+                        }
+                    }
+                    // Save changes to local storage.
+                    localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
                 })
         
                 // Append button
