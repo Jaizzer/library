@@ -54,6 +54,10 @@ window.addEventListener('load', function() {
 const bookAdder1 = document.querySelector(".book-adder-1");
 bookAdder1.addEventListener("click", setFormToAddMode);
 
+// Access the book adding button and add feature that pops-up a form for adding book.
+const bookAdder2 = document.querySelector(".book-adder-2");
+bookAdder2.addEventListener("click", setFormToAddMode);
+
 
 // Access cancel button and add feature that hides form when pressed.
 const cancelButton = document.querySelector("#cancel");
