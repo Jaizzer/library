@@ -115,3 +115,36 @@ form button {
     row-gap: 3px;
     align-content: start;
 }
+
+
+.book-adder-container {
+    border-radius: 10px;
+    border: 2px solid var(--background);
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    padding: 25px;
+}
+
+.book-adder {
+   border: none;
+   background-color: transparent;
+
+   display: grid;
+   justify-content: center;
+   align-content: center;
+}
+
+.book-adder .icon {
+    transform: scale(1.5);
+    fill: var(--secondary);
+}
+
+
+.book-adder-container:hover,
+.book-adder-container:hover .icon {
+    border-color: var(--primary);
+    fill: var(--primary)
+}
