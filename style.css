@@ -102,3 +102,16 @@ form button {
     background-color: var(--primary);
     color: white;
 }
+
+
+.card {
+    background-color: var(--secondary);
+  
+    border-radius: 10px;
+    padding: 25px;
+
+    display: grid;
+    grid-auto-rows: auto;
+    row-gap: 3px;
+    align-content: start;
+}
