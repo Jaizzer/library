@@ -74,6 +74,9 @@ function setFormToAddMode() {
     // Set the form feature to 'add' instead of edit.
     form.className = "add";
 
+    // Change the button caption to 'add' instead of 'edit'.
+    submitButton.textContent = "Add Book"; 
+
     // Pop-up the form.
     formContainer.className = "form-container visible";
 
