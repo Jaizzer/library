@@ -229,3 +229,27 @@ form button:hover {
     border-color: var(--primary);
     fill: var(--primary)
 }
+
+.book-adder-2 {
+    height: 45px;
+    width: 45px;
+
+    border: 1px solid var(--primary);
+    border-radius: 90px;
+
+    background-color: var(--primary);
+
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+
+    font-size: 30px;
+    color: white;
+
+    text-align: center;
+}
+
+.book-adder-2:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
