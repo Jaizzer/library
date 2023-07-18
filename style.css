@@ -146,7 +146,7 @@ form button:hover {
 
     display: grid;
     grid-auto-rows: auto;
-    row-gap: 3px;
+    row-gap: 9px;
     align-content: start;
 }
 
