@@ -121,6 +121,10 @@ form button {
     border-color: var(--primary);
 }
 
+.title {
+    font-size: 20px;
+}
+
 .book-adder-container {
     border-radius: 10px;
     border: 2px solid var(--background);
