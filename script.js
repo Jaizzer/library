@@ -52,7 +52,7 @@ window.addEventListener('load', function() {
 
 // Access the book adding button and add feature that pops-up a form for adding book.
 const bookAdder1 = document.querySelector(".book-adder-1");
-bookAdder1.addEventListener("click", setFormToAddMode);
+bookAdder1Div.addEventListener("click", setFormToAddMode);
 
 // Access the book adding button and add feature that pops-up a form for adding book.
 const bookAdder2 = document.querySelector(".book-adder-2");
