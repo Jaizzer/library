@@ -117,6 +117,9 @@ form button {
     align-content: start;
 }
 
+.card:hover {
+    border-color: var(--primary);
+}
 
 .book-adder-container {
     border-radius: 10px;
