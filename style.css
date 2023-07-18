@@ -157,8 +157,8 @@ form button {
 }
 
 .card button:hover {
-    border-color: #2e2b58;
-    background-color: #2e2b58;
+    border-color: var(--accent);
+    background-color: var(--accent);
 }
 
 .card .icon {
