@@ -17,9 +17,6 @@ const statusInput = document.querySelector("#status-input");
 // Acces the form's submit button.
 const submitButton = document.querySelector("#submit-button");
 
-// Access the book-adder container.
-const bookAdder1Div = document.querySelector(".book-adder-1-container");
-
 // Create variable to store book id of the book to be edited or deleted.
 let bookId;
 
@@ -51,6 +48,8 @@ window.addEventListener('load', function() {
 
 
 // Access the book adding button and add feature that pops-up a form for adding book.
+// Access the book-adder container.
+const bookAdder1Div = document.querySelector(".book-adder-1-container");
 bookAdder1Div.addEventListener("click", setFormToAddMode);
 
 // Access the book adding button and add feature that pops-up a form for adding book.
