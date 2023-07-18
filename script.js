@@ -18,7 +18,7 @@ const statusInput = document.querySelector("#status-input");
 const submitButton = document.querySelector("#submit-button");
 
 // Access the book-adder container.
-const bookAdderDiv = document.querySelector(".book-adder-container");
+const bookAdder1Div = document.querySelector(".book-adder-1-container");
 
 // Create variable to store book id of the book to be edited or deleted.
 let bookId;
@@ -45,14 +45,14 @@ window.addEventListener('load', function() {
     // Render the cards.
     for (let book of myLibrary) {
         let card = createCard(book);
-        mainContent.insertBefore(card, bookAdderDiv);
+        mainContent.insertBefore(card, bookAdder1Div);
     }
 });
 
 
 // Access the book adding button and add feature that pops-up a form for adding book.
-const bookAdder = document.querySelector(".book-adder");
-bookAdder.addEventListener("click", setFormToAddMode);
+const bookAdder1 = document.querySelector(".book-adder-1");
+bookAdder1.addEventListener("click", setFormToAddMode);
 
 
 // Access cancel button and add feature that hides form when pressed.
@@ -109,7 +109,7 @@ function addBook() {
 
     // Render the corresponding the book's corresponding card in the main-content area.
     let card = createCard(currentBook);
-    mainContent.insertBefore(card, bookAdderDiv);
+    mainContent.insertBefore(card, bookAdder1Div);
 
     // Clear the form.
     clearForm();
