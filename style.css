@@ -107,6 +107,7 @@ form button {
 .card {
     background-color: var(--secondary);
   
+    border: 2px solid var(--secondary);
     border-radius: 10px;
     padding: 25px;
 
