@@ -28,6 +28,24 @@ body * {
     grid-template-rows: auto 1fr;
 }
 
+.header {
+    background-color: var(--primary);
+    height: 80px;
+
+    font-size: 30px;
+    font-weight: 600;
+
+    padding-left: 50px;
+
+    display: grid;
+    align-content: center;
+}
+
+.logo {
+    color: white;
+    text-transform: uppercase;
+}
+
 .main-content {
     width: 100%;
 
