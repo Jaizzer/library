@@ -182,7 +182,8 @@ form button:hover {
 
 .card > .status button {
     height: 20px;
-    width: 80px;
+
+    text-align: justify;
 }
 
 .card > .actions {
