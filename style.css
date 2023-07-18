@@ -125,6 +125,10 @@ form button {
     color: white;
 }
 
+form button:hover {
+    border-color: var(--accent);
+    background-color: var(--accent);
+}
 
 .card {
     background-color: var(--secondary);
