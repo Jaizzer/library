@@ -198,7 +198,7 @@ form button:hover {
     gap: 10px;
 }
 
-.book-adder-1-container {
+.book-adder-1 {
     border-radius: 10px;
     border: 2px solid var(--secondary);
 
@@ -209,23 +209,14 @@ form button:hover {
     padding: 25px;
 }
 
-.book-adder-1 {
-   border: none;
-   background-color: transparent;
-
-   display: grid;
-   justify-content: center;
-   align-content: center;
-}
-
 .book-adder-1 .icon {
     transform: scale(1.5);
     fill: var(--secondary);
 }
 
 
-.book-adder-1-container:hover,
-.book-adder-1-container:hover .icon {
+.book-adder-1:hover,
+.book-adder-1:hover .icon {
     border-color: var(--primary);
     fill: var(--primary)
 }

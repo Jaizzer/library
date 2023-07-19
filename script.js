@@ -42,15 +42,14 @@ window.addEventListener('load', function() {
     // Render the cards.
     for (let book of myLibrary) {
         let card = createCard(book);
-        mainContent.insertBefore(card, bookAdder1Div);
+        mainContent.insertBefore(card, bookAdder1);
     }
 });
 
 
-// Access the book adding button and add feature that pops-up a form for adding book.
-// Access the book-adder container.
-const bookAdder1Div = document.querySelector(".book-adder-1-container");
-bookAdder1Div.addEventListener("click", setFormToAddMode);
+// Access the book adding div and add feature that pops-up a form for adding book.
+const bookAdder1 = document.querySelector(".book-adder-1");
+bookAdder1.addEventListener("click", setFormToAddMode);
 
 // Access the book adding button and add feature that pops-up a form for adding book.
 const bookAdder2 = document.querySelector(".book-adder-2");
@@ -111,7 +110,7 @@ function addBook() {
 
     // Render the corresponding the book's corresponding card in the main-content area.
     let card = createCard(currentBook);
-    mainContent.insertBefore(card, bookAdder1Div);
+    mainContent.insertBefore(card, bookAdder1);
 
     // Clear the form.
     clearForm();
