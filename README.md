@@ -11,7 +11,9 @@ Jaizzer Library is a web application that allows users to manage their book coll
 
 ## Getting Started
 
-To run the Jaizzer Library web application locally, follow these steps:
+You can access and use the Jaizzer Library web application by visiting the following link: [Jaizzer Library Web App](https://jaizzer.github.io/library/)
+
+If you prefer to run the web application locally, you can follow these steps:
 
 1. Clone the repository: `git clone https://github.com/your-username/jaizzer-library.git`
 2. Navigate to the project directory: `cd jaizzer-library`
