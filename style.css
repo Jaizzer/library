@@ -45,8 +45,23 @@ body * {
 }
 
 .logo {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 10px;
+
+    justify-content: start;
+}
+
+.logo-name {
     color: white;
     text-transform: uppercase;
+}
+
+.logo .icon {
+    height: 40px;
+    width: 40px;
+    fill: white;
 }
 
 .main-content {
