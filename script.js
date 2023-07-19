@@ -300,6 +300,7 @@ function createCard(Book) {
     // Add functionality to the delete button.
     deleteButton.addEventListener('click', function() {
         
+        
         // Get the id of the book corresponding to the current delete button.
         bookId = getBookId(this);
 
