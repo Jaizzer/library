@@ -299,10 +299,13 @@ function createCard(Book) {
     
     // Add functionality to the delete button.
     deleteButton.addEventListener('click', function() {
-
+        
         // Get the id of the book corresponding to the current delete button.
         bookId = getBookId(this);
 
+        // Confirm before deleting.
+        confirm("Are you sure you want to delete the book?);
+        
         // Delete book.
         deleteBook();
     })
