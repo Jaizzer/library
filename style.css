@@ -65,7 +65,7 @@ body * {
     display: none;
 }
 
-.visible {
+.form-container .visible {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
 }
