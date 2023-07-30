@@ -21,13 +21,15 @@ const submitButton = document.querySelector("#submit-button");
 let bookId;
 
 
-// Book constructor
-function Book(title, author, pageCount, status, id) {
-    this.title = title;
-    this.author = author;
-    this.pageCount = pageCount;
-    this.status = status;
-    this.id = id;
+// Book class
+class Book {
+    constructor(title, author, pageCount, status, id) {
+        this.title = title;
+        this.author = author;
+        this.pageCount = pageCount;
+        this.status = status;
+        this.id = id;
+    }
 }
 
 
