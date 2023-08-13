@@ -2,7 +2,7 @@
 
 Jaizzer Library is a web application that allows users to manage their book collection. Users can add, edit, and delete books, as well as track their reading status.
 
-Live preview: [Jaizzer Library Web App](https://jaizzer.github.io/library/)
+Live preview: [Jaizzer's Library](https://jaizzer.github.io/library/)
 
 ## Features
 
@@ -13,7 +13,7 @@ Live preview: [Jaizzer Library Web App](https://jaizzer.github.io/library/)
 
 ## Getting Started
 
-You can access and use the Jaizzer Library web application by visiting the following link: [Jaizzer Library Web App](https://jaizzer.github.io/library/)
+You can access and use the Jaizzer Library web application by visiting the following link: [Jaizzer's Library](https://jaizzer.github.io/library/)
 
 If you prefer to run the web application locally, you can follow these steps:
 
