@@ -13,7 +13,7 @@ Live preview: [Jaizzer's Library](https://jaizzer.github.io/library/)
 
 ## Getting Started
 
-You can access and use the Jaizzer Library web application by visiting the following link: [Jaizzer's Library](https://jaizzer.github.io/library/)
+You can access and use the Jaizzer's Library web application by visiting the following link: [Jaizzer's Library](https://jaizzer.github.io/library/)
 
 If you prefer to run the web application locally, you can follow these steps:
 
